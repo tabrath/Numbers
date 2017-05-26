@@ -3,7 +3,7 @@ using System.Text;
 using PeterO;
 using PeterO.Numbers;
 
-namespace Test {
+namespace PeterO.Numbers.Tests {
   internal sealed class StringAndBigInt {
     private const string ValueDigits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

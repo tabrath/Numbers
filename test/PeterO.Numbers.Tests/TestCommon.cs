@@ -9,7 +9,7 @@ using System;
 using System.Text;
 using NUnit.Framework;
 
-namespace Test {
+namespace PeterO.Numbers.Tests {
   public static class TestCommon {
     private static readonly string ValueDigits = "0123456789";
 

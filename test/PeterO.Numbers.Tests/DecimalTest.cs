@@ -13,7 +13,7 @@ using NUnit.Framework;
 using PeterO;
 using PeterO.Numbers;
 
-namespace Test {
+namespace PeterO.Numbers.Tests {
   [TestFixture]
   public class DecimalTest {
     private static readonly Regex ValuePropertyLine = new Regex(
@@ -453,14 +453,14 @@ System.Globalization.NumberStyles.Number;
       for (var i = 0; i < 1; ++i) {
         // Reads decimal test files described in:
         // <http://speleotrove.com/decimal/dectest.html>
-        foreach (var f in CBOR.ExtensiveTest.GetTestFiles()) {
+        foreach (var f in ExtensiveTest.GetTestFiles()) {
           if (!Path.GetFileName(f).Contains(".decTest")) {
             continue;
           }
           Console.WriteLine(f);
           IDictionary<string, string> context =
             new Dictionary<string, string>();
-          using (var w = new StreamReader(f)) {
+          using (var w = new StreamReader(File.OpenRead(f))) {
             while (!w.EndOfStream) {
               string ln = w.ReadLine();
               {

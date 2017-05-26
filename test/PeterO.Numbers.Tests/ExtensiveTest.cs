@@ -11,9 +11,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
-using PeterO.Numbers;
 
-namespace CBOR {
+namespace PeterO.Numbers.Tests {
   [TestFixture]
   public class ExtensiveTest {
     public static void AssertFlags(int expected, int actual, string str) {
@@ -1162,7 +1161,7 @@ StartsWith(chunks[2], "o")) {
       if ((expectedFlags & (EContext.FlagInexact | EContext.FlagInvalid)) ==
             0) {
             d3 = op1.Add(op2, null);
-            Test.TestCommon.CompareTestEqual(result, d3, ln);
+            TestCommon.CompareTestEqual(result, d3, ln);
           }
           AssertFlags(expectedFlags, ctx.Flags, ln);
         }
@@ -1180,7 +1179,7 @@ StartsWith(chunks[2], "o")) {
       if ((expectedFlags & (EContext.FlagInexact | EContext.FlagInvalid)) ==
             0) {
             d3 = op1.Subtract(op2, null);
-            Test.TestCommon.CompareTestEqual(result, d3, ln);
+            TestCommon.CompareTestEqual(result, d3, ln);
           }
           AssertFlags(expectedFlags, ctx.Flags, ln);
         }
@@ -1198,7 +1197,7 @@ StartsWith(chunks[2], "o")) {
       if ((expectedFlags & (EContext.FlagInexact | EContext.FlagInvalid)) ==
             0) {
             d3 = op1.Multiply(op2, null);
-            Test.TestCommon.CompareTestEqual(result, d3, ln);
+            TestCommon.CompareTestEqual(result, d3, ln);
           }
           AssertFlags(expectedFlags, ctx.Flags, ln);
         }
@@ -1216,7 +1215,7 @@ StartsWith(chunks[2], "o")) {
       if ((expectedFlags & (EContext.FlagInexact | EContext.FlagInvalid)) ==
             0) {
             d3 = op1.Divide(op2, null);
-            Test.TestCommon.CompareTestEqual(result, d3, ln);
+            TestCommon.CompareTestEqual(result, d3, ln);
           }
           AssertFlags(expectedFlags, ctx.Flags, ln);
         }
@@ -1242,7 +1241,7 @@ StartsWith(chunks[2], "o")) {
       if ((expectedFlags & (EContext.FlagInexact | EContext.FlagInvalid)) ==
             0) {
             d3 = op1.MultiplyAndAdd(op2, op3, null);
-            Test.TestCommon.CompareTestEqual(result, d3, ln);
+            TestCommon.CompareTestEqual(result, d3, ln);
           }
           AssertFlags(expectedFlags, ctx.Flags, ln);
         }
@@ -1260,7 +1259,7 @@ StartsWith(chunks[2], "o")) {
       if ((expectedFlags & (EContext.FlagInexact | EContext.FlagInvalid)) ==
             0) {
             d3 = op1.MultiplyAndSubtract(op2, op3, null);
-            Test.TestCommon.CompareTestEqual(result, d3, ln);
+            TestCommon.CompareTestEqual(result, d3, ln);
           }
           AssertFlags(expectedFlags, ctx.Flags, ln);
         }
@@ -1306,7 +1305,7 @@ StartsWith(chunks[2], "o")) {
             !lowerF.Contains(".dectest") && !lowerF.Contains(".fptest")) {
           continue;
         }
-        using (var w = new StreamReader(f)) {
+        using (var w = new StreamReader(File.OpenRead(f))) {
           while (!w.EndOfStream) {
             if (errors.Count > 100) {
               break;

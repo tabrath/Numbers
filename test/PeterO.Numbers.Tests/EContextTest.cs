@@ -2,7 +2,7 @@ using System;
 using NUnit.Framework;
 using PeterO.Numbers;
 
-namespace Test {
+namespace PeterO.Numbers.Tests {
   [TestFixture]
   public class EContextTest {
     [Test]

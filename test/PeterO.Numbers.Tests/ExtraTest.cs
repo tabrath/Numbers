@@ -9,7 +9,7 @@ using System;
 using NUnit.Framework;
 using PeterO.Numbers;
 
-namespace Test {
+namespace PeterO.Numbers.Tests {
   public class ExtraTest {
     public static void TestStringEqualRoundTrip(EDecimal obj) {
       string str = obj.ToString();

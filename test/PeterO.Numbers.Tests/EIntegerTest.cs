@@ -4,7 +4,7 @@ using NUnit.Framework;
 using PeterO;
 using PeterO.Numbers;
 
-namespace Test {
+namespace PeterO.Numbers.Tests {
   [TestFixture]
   public class EIntegerTest {
     private static long[] valueBitLengths = { -4294967297L, 33L, -4294967296L,

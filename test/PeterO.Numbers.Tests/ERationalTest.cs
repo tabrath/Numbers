@@ -3,7 +3,7 @@ using NUnit.Framework;
 using PeterO;
 using PeterO.Numbers;
 
-namespace Test {
+namespace PeterO.Numbers.Tests {
   [TestFixture]
   public class ERationalTest {
     [Test]

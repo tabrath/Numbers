@@ -10,7 +10,7 @@ using System.Text;
 using PeterO;
 using PeterO.Numbers;
 
-namespace Test {
+namespace PeterO.Numbers.Tests {
     /// <summary>Description of RandomObjects.</summary>
   public static class RandomObjects {
     public static byte[] RandomByteString(RandomGenerator rand) {

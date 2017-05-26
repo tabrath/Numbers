@@ -4,7 +4,7 @@ using NUnit.Framework;
 using PeterO;
 using PeterO.Numbers;
 
-namespace Test {
+namespace PeterO.Numbers.Tests {
   [TestFixture]
   public class EDecimalTest {
     private static readonly string[] ValueTestStrings = { "1.265e-4",

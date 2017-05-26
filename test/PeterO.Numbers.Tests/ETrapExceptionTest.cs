@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
 
-namespace Test {
+namespace PeterO.Numbers.Tests {
   [TestFixture]
   public class ETrapExceptionTest {
     [Test]
